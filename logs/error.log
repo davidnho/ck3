@@ -41,3 +41,39 @@ Stack Trace:
 #2 {main}
 
 
+2016-09-26 06:32:22 Warning: Warning (2): _() expects exactly 1 parameter, 2 given in [/home/ubuntu/workspace/src/Controller/ArticlesController.php, line 58]
+Request URL: /articles/delete/6
+Referer URL: https://ck3-davidnho.c9users.io/articles/?_c9_id=livepreview0&_c9_host=https://ide.c9.io
+Client IP: 10.240.0.240
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+_ - [internal], line ??
+App\Controller\ArticlesController::delete() - APP/Controller/ArticlesController.php, line 58
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 435
+Cake\Http\ActionDispatcher::_invoke() - CORE/src/Http/ActionDispatcher.php, line 122
+Cake\Http\ActionDispatcher::dispatch() - CORE/src/Http/ActionDispatcher.php, line 96
+Cake\Http\BaseApplication::__invoke() - CORE/src/Http/BaseApplication.php, line 83
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\RoutingMiddleware::__invoke() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Routing\Middleware\AssetMiddleware::__invoke() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 88
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Error\Middleware\ErrorHandlerMiddleware::__invoke() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 52
+Cake\Http\Runner::__invoke() - CORE/src/Http/Runner.php, line 65
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 51
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 82
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-09-26 06:32:22 Warning: Headers already sent in /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Debugger.php:753
+2016-09-26 06:32:22 Error: [RuntimeException] Unable to emit response; headers already sent
+Request URL: /articles/delete/6
+Referer URL: https://ck3-davidnho.c9users.io/articles/?_c9_id=livepreview0&_c9_host=https://ide.c9.io
+Client IP: 10.240.0.240
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(107): Zend\Diactoros\Response\SapiStreamEmitter->emit(Object(Zend\Diactoros\Response))
+#1 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->emit(Object(Zend\Diactoros\Response))
+#2 {main}
+
+

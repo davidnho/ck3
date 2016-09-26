@@ -1,0 +1,43 @@
+2016-09-26 00:16:27 Error: Fatal Error (1): Call to undefined method Cake\Validation\Validator::redirect() in [/home/ubuntu/workspace/src/Model/Table/ArticlesTable.php, line 20]
+Request URL: /articles/add
+Referer URL: https://ck3-davidnho.c9users.io/articles/add
+Client IP: 10.240.1.14
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-26 00:16:27 Warning: Headers already sent in /home/ubuntu/workspace/src/Model/Table/ArticlesTable.php:20
+2016-09-26 00:16:27 Error: [Cake\Error\FatalErrorException] Call to undefined method Cake\Validation\Validator::redirect()
+Request URL: /articles/add
+Referer URL: https://ck3-davidnho.c9users.io/articles/add
+Client IP: 10.240.1.14
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/home/ubuntu/wo...', 20)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+
+2016-09-26 00:16:48 Error: Fatal Error (1): Call to undefined method Cake\Validation\Validator::redirect() in [/home/ubuntu/workspace/src/Model/Table/ArticlesTable.php, line 20]
+Request URL: /articles/add
+Referer URL: https://ck3-davidnho.c9users.io/articles/?_c9_id=livepreview0&_c9_host=https://ide.c9.io
+Client IP: 10.240.1.16
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 216
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-09-26 00:16:48 Error: [Cake\Error\FatalErrorException] Call to undefined method Cake\Validation\Validator::redirect()
+Request URL: /articles/add
+Referer URL: https://ck3-davidnho.c9users.io/articles/?_c9_id=livepreview0&_c9_host=https://ide.c9.io
+Client IP: 10.240.1.16
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to undefin...', '/home/ubuntu/wo...', 20)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

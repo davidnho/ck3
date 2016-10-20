@@ -77,3 +77,188 @@ Stack Trace:
 #2 {main}
 
 
+2016-10-17 00:42:01 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Phpmyadmin could not be found.
+Exception Attributes: array (
+  'class' => 'Phpmyadmin',
+  'plugin' => false,
+  'prefix' => false,
+  '_ext' => false,
+)
+Request URL: /phpmyadmin
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ControllerFactory.php(72): Cake\Http\ControllerFactory->missingController(Object(Cake\Network\Request))
+#1 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(93): Cake\Http\ControllerFactory->create(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#2 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-10-17 00:47:39 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'cake_bookmarks.articles' doesn't exist
+Request URL: /
+Referer URL: https://ide.c9.io/davidnho/ck3
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'articles', Array, Object(Cake\Database\Schema\Table))
+#1 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(63): Cake\Database\Schema\Collection->describe('articles', Array)
+#2 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/ORM/Table.php(440): Cake\Database\Schema\CachedCollection->describe('articles')
+#3 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->schema()
+#4 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/ORM/Query.php(168): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\ArticlesTable))
+#5 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/ORM/Table.php(1336): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\ArticlesTable))
+#6 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/ORM/Table.php(964): Cake\ORM\Table->query()
+#7 /home/ubuntu/workspace/src/Controller/ArticlesController.php(18): Cake\ORM\Table->find('all')
+#8 [internal function]: App\Controller\ArticlesController->index()
+#9 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Controller/Controller.php(435): call_user_func_array(Array, Array)
+#10 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#11 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\ArticlesController))
+#12 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#13 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#14 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#16 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#17 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#20 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#21 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#22 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->run()
+#23 {main}
+
+
+2016-10-17 00:48:22 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/" could not be found.
+Exception Attributes: array (
+  'url' => '/',
+)
+Request URL: /
+Referer URL: https://ide.c9.io/davidnho/ck3
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Router.php(351): Cake\Routing\RouteCollection->parse('/', 'GET')
+#1 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(43): Cake\Routing\Router::parse('/', 'GET')
+#2 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#3 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#4 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#5 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#6 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#7 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#8 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->run()
+#10 {main}
+
+
+2016-10-17 00:49:03 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/" could not be found.
+Exception Attributes: array (
+  'url' => '/',
+)
+Request URL: /
+Referer URL: https://ide.c9.io/davidnho/ck3
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Router.php(351): Cake\Routing\RouteCollection->parse('/', 'GET')
+#1 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(43): Cake\Routing\Router::parse('/', 'GET')
+#2 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#3 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#4 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#5 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#6 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#7 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#8 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->run()
+#10 {main}
+
+
+2016-10-17 00:49:43 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/" could not be found.
+Exception Attributes: array (
+  'url' => '/',
+)
+Request URL: /
+Referer URL: https://ide.c9.io/davidnho/ck3
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Router.php(351): Cake\Routing\RouteCollection->parse('/', 'GET')
+#1 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(43): Cake\Routing\Router::parse('/', 'GET')
+#2 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#3 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#4 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#5 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#6 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#7 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#8 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->run()
+#10 {main}
+
+
+2016-10-17 00:50:54 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/" could not be found.
+Exception Attributes: array (
+  'url' => '/',
+)
+Request URL: /
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Router.php(351): Cake\Routing\RouteCollection->parse('/', 'GET')
+#1 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(43): Cake\Routing\Router::parse('/', 'GET')
+#2 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#3 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#4 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#5 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#6 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#7 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#8 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->run()
+#10 {main}
+
+
+2016-10-17 00:51:04 Error: [Cake\Routing\Exception\MissingRouteException] A route matching "/" could not be found.
+Exception Attributes: array (
+  'url' => '/',
+)
+Request URL: /
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Router.php(351): Cake\Routing\RouteCollection->parse('/', 'GET')
+#1 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(43): Cake\Routing\Router::parse('/', 'GET')
+#2 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#3 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#4 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#5 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#6 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#7 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#8 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->run()
+#10 {main}
+
+
+2016-10-17 05:19:50 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`cake_bookmarks`.`bookmarks`, CONSTRAINT `bookmarks_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`))
+Request URL: /users/delete/1
+Referer URL: http://ck3-davidnho.c9users.io/users
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php(36): PDOStatement->execute(NULL)
+#1 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php(172): Cake\Database\Statement\MysqlStatement->execute(NULL)
+#2 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php(56): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#3 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Database/Connection.php(276): Cake\Database\Log\LoggingStatement->execute()
+#4 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Database/Query.php(189): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#5 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/ORM/Table.php(1895): Cake\Database\Query->execute()
+#6 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/ORM/Table.php(1826): Cake\ORM\Table->_processDelete(Object(App\Model\Entity\User), Object(ArrayObject))
+#7 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Database/Connection.php(570): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#8 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/ORM/Table.php(1831): Cake\Database\Connection->transactional(Object(Closure))
+#9 /home/ubuntu/workspace/src/Controller/UsersController.php(103): Cake\ORM\Table->delete(Object(App\Model\Entity\User))
+#10 [internal function]: App\Controller\UsersController->delete('1')
+#11 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Controller/Controller.php(435): call_user_func_array(Array, Array)
+#12 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#13 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#14 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#15 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#16 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#17 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#18 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#19 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#20 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#21 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#22 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#23 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#24 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->run()
+#25 {main}
+
+

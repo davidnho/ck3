@@ -32,6 +32,7 @@ class ComposerStaticInitf747866ef085164160083315a3c25169
             'Symfony\\Component\\Yaml\\' => 23,
             'Symfony\\Component\\VarDumper\\' => 28,
             'Symfony\\Component\\Filesystem\\' => 29,
+            'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Config\\' => 25,
         ),
@@ -40,6 +41,7 @@ class ComposerStaticInitf747866ef085164160083315a3c25169
             'Psy\\' => 4,
             'Psr\\Http\\Message\\' => 17,
             'PhpParser\\' => 10,
+            'PhpAmqpLib\\' => 11,
             'Phinx\\' => 6,
         ),
         'M' => 
@@ -95,6 +97,10 @@ class ComposerStaticInitf747866ef085164160083315a3c25169
         array (
             0 => __DIR__ . '/..' . '/symfony/filesystem',
         ),
+        'Symfony\\Component\\Debug\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/debug',
+        ),
         'Symfony\\Component\\Console\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
@@ -114,6 +120,10 @@ class ComposerStaticInitf747866ef085164160083315a3c25169
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'PhpAmqpLib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-amqplib/php-amqplib/PhpAmqpLib',
         ),
         'Phinx\\' => 
         array (

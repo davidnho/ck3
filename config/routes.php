@@ -54,8 +54,11 @@ Router::scope('/', function (RouteBuilder $routes) {
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
+     
+    // $routes->connect('/pages/', ['controller' => 'Pages', 'action' => 'display']);
     // $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
-    $routes->connect('/', ['controller' => 'Articles', 'action' => 'index']);
+    $routes->connect('/', ['controller' => 'Bookmarks', 'action' => 'index']);
+    
 
     /**
      * Connect catchall routes for all controllers.
@@ -75,6 +78,29 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->fallbacks('DashedRoute');
 });
+
+Router::scope(
+    '/bookmarks',
+    ['controller'=>'Bookmarks'],
+    function($routes){
+        $routes->connect('/tagged/*',['action'=>'tags']);
+    }
+    );
+
+Router::scope('/', function ($routes) {
+    // Connect the default home and /pages/* routes.
+    $routes->connect('/', [
+        'controller' => 'Pages',
+        'action' => 'display', 'home'
+    ]);
+    $routes->connect('/pages/*', [
+        'controller' => 'Pages',
+        'action' => 'display'
+    ]);
+
+    // Connect the conventions based default routes.
+    $routes->fallbacks();
+});    
 
 /**
  * Load all plugin routes.  See the Plugin documentation on

@@ -262,3 +262,75 @@ Stack Trace:
 #25 {main}
 
 
+2016-10-20 00:18:11 Error: [Cake\Controller\Exception\MissingActionException] Action BookmarksController::tags() could not be found, or is not accessible.
+Exception Attributes: array (
+  'controller' => 'BookmarksController',
+  'action' => 'tags',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Request URL: /bookmarks/tagged
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#1 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\BookmarksController))
+#2 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#3 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#4 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#5 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#12 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->run()
+#13 {main}
+
+
+2016-10-20 00:21:37 Error: [BadMethodCallException] Unknown finder method "tagged"
+Request URL: /bookmarks/tagged
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/ORM/Table.php(967): Cake\ORM\Table->callFinder('tagged', Object(Cake\ORM\Query), Array)
+#1 /home/ubuntu/workspace/src/Controller/BookmarksController.php(128): Cake\ORM\Table->find('tagged', Array)
+#2 [internal function]: App\Controller\BookmarksController->tags()
+#3 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Controller/Controller.php(435): call_user_func_array(Array, Array)
+#4 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(122): Cake\Controller\Controller->invokeAction()
+#5 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\BookmarksController))
+#6 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#7 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#14 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#15 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#16 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->run()
+#17 {main}
+
+
+2016-10-20 00:25:05 Error: [Cake\View\Exception\MissingTemplateException] Template file "Bookmarks/tags.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Bookmarks/tags.ctp',
+)
+Request URL: /bookmarks/tagged
+Stack Trace:
+#0 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/View/View.php(591): Cake\View\View->_getViewFileName(NULL)
+#1 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Controller/Controller.php(617): Cake\View\View->render(NULL, NULL)
+#2 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(128): Cake\Controller\Controller->render()
+#3 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/ActionDispatcher.php(96): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\BookmarksController))
+#4 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/BaseApplication.php(83): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#5 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#6 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#7 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#8 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#9 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#10 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php(81): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#11 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response), Object(Cake\Http\Runner))
+#12 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Runner.php(51): Cake\Http\Runner->__invoke(Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#13 /home/ubuntu/workspace/vendor/cakephp/cakephp/src/Http/Server.php(92): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Zend\Diactoros\ServerRequest), Object(Zend\Diactoros\Response))
+#14 /home/ubuntu/workspace/webroot/index.php(37): Cake\Http\Server->run()
+#15 {main}
+
+
